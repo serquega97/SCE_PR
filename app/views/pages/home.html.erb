@@ -75,7 +75,7 @@
               <!-- Cart Item -->
               <div class="media">
                 <a class="pull-left" href="#">
-                  <img  class="media-object" src="shop/cart/cart-1.jpg" alt="image" />
+                  <%=image_tag("shop/cart/cart-1.jpg", class:"img-responsive", alt:"product-img") %>
                 </a>
                 <div class="media-body">
                   <h4 class="media-heading"><a href="">Ladies Bag</a></h4>
@@ -90,7 +90,7 @@
               <!-- Cart Item -->
               <div class="media">
                 <a class="pull-left" href="#">
-                  <img class="media-object" src="shop/cart/cart-1.jpg" alt="image"/>
+                  <%= image_tag("shop/cart/cart-2.jpg", class:"media-object", alt:"image")%>
                 </a>
                 <div class="media-body">
                   <h4 class="media-heading"><a href="">Ladies Bag</a></h4>
@@ -310,14 +310,8 @@
             data-param10=""
             data-description="">
           <!-- MAIN IMAGE -->
-          <img src="slider/slider-1.jpg"
-               data-bgposition="cover"
-               data-bgfit="cover"
-               data-bgrepeat="no-repeat"
-               data-bgparallax="on"
-               class="rev-slidebg"
-               data-no-retina
-               alt="Slider image" />
+          <%=image_tag("slider/slider-1.jpg", class:"rev-slidebg", alt:"") %>
+
           <!-- LAYERS -->
 
           <!-- LAYER NR. 1 -->
@@ -396,12 +390,8 @@
             data-saveperformance="off"
             data-title="Slide">
           <!-- MAIN IMAGE -->
-          <img src="slider/slider-3.jpg" alt=""
-               data-bgposition="cover"
-               data-bgfit="cover"
-               data-bgrepeat="no-repeat"
-               data-bgparallax="on"
-               class="rev-slidebg" data-no-retina />
+          <%=image_tag("slider/slider-3.jpg", class:"rev-slidebg", alt:"") %>
+
           <!-- LAYERS -->
 
 
@@ -491,13 +481,7 @@
             data-param10=""
             data-description="">
           <!-- MAIN IMAGE -->
-          <img src="slider/slider-2.jpg"
-               data-bgposition="center center"
-               data-bgfit="cover"
-               data-bgrepeat="no-repeat"
-               data-bgparallax="on"
-               class="rev-slidebg"
-               data-no-retina  alt="slider img" />
+          <%=image_tag("slider/slider-2.jpg", class:"rev-slidebg", alt:"") %>
           <!-- LAYERS -->
 
 
@@ -581,7 +565,7 @@
       <div class="col-md-6">
         <div class="category-box">
           <a href="">
-            <img src="shop/category/category-1.jpg" alt="" />
+            <%=image_tag("shop/category/category-1.jpg", alt:"") %>
             <div class="content">
               <h3>Clothes Sales</h3>
               <p>Shop New Season Clothing</p>
@@ -590,7 +574,7 @@
         </div>
         <div class="category-box">
           <a href="">
-            <img src="shop/category/category-2.jpg" alt="" />
+            <%=image_tag("shop/category/category-2.jpg", alt:"") %>
             <div class="content">
               <h3>Smart Casuals</h3>
               <p>Get Wide Range Selection</p>
@@ -601,7 +585,7 @@
       <div class="col-md-6">
         <div class="category-box category-box-2">
           <a href="">
-            <img src="shop/category/category-3.jpg" alt="" />
+            <%=image_tag("shop/category/category-3.jpg", alt:"") %>
             <div class="content">
               <h3>Jewellery</h3>
               <p>Special Design Comes First</p>
@@ -626,7 +610,7 @@
         <div class="product-item">
           <div class="product-thumb">
             <span class="bage">Sale</span>
-            <img class="img-responsive" src="shop/products/product-1.jpg" alt="product-img" />
+            <%=image_tag("shop/products/product-1.jpg", class:"img-responsive", alt:"product-img") %>
             <div class="preview-meta">
               <ul>
                 <li>
@@ -652,7 +636,7 @@
       <div class="col-md-4">
         <div class="product-item">
           <div class="product-thumb">
-            <img class="img-responsive" src="shop/products/product-2.jpg" alt="product-img" />
+            <%=image_tag("shop/products/product-2.jpg", class:"img-responsive", alt:"product-img") %>
             <div class="preview-meta">
               <ul>
                 <li>
@@ -678,7 +662,7 @@
       <div class="col-md-4">
         <div class="product-item">
           <div class="product-thumb">
-            <img class="img-responsive" src="shop/products/product-3.jpg" alt="product-img" />
+            <%=image_tag("shop/products/product-3.jpg", class:"img-responsive", alt:"product-img") %>
             <div class="preview-meta">
               <ul>
                 <li>
@@ -704,7 +688,7 @@
       <div class="col-md-4">
         <div class="product-item">
           <div class="product-thumb">
-            <img class="img-responsive" src="shop/products/product-4.jpg" alt="product-img" />
+            <%=image_tag("shop/products/product-4.jpg", class:"img-responsive", alt:"product-img") %>
             <div class="preview-meta">
               <ul>
                 <li>
@@ -730,7 +714,7 @@
       <div class="col-md-4">
         <div class="product-item">
           <div class="product-thumb">
-            <img class="img-responsive" src="shop/products/product-5.jpg" alt="product-img" />
+            <%=image_tag("shop/products/product-5.jpg", class:"img-responsive", alt:"product-img") %>
             <div class="preview-meta">
               <ul>
                 <li>
@@ -756,7 +740,7 @@
       <div class="col-md-4">
         <div class="product-item">
           <div class="product-thumb">
-            <img class="img-responsive" src="shop/products/product-6.jpg" alt="product-img" />
+            <%=image_tag("shop/products/product-6.jpg", class:"img-responsive", alt:"product-img") %>
             <div class="preview-meta">
               <ul>
                 <li>
@@ -783,7 +767,7 @@
         <div class="product-item">
           <div class="product-thumb">
             <span class="bage">Sale</span>
-            <img class="img-responsive" src="shop/products/product-7.jpg" alt="product-img" />
+            <%=image_tag("shop/products/product-7.jpg", class:"img-responsive", alt:"product-img") %>
             <div class="preview-meta">
               <ul>
                 <li>
@@ -809,7 +793,7 @@
       <div class="col-md-4">
         <div class="product-item">
           <div class="product-thumb">
-            <img class="img-responsive" src="shop/products/product-8.jpg" alt="product-img" />
+            <%=image_tag("shop/products/product-8.jpg", class:"img-responsive", alt:"product-img") %>
             <div class="preview-meta">
               <ul>
                 <li>
@@ -835,7 +819,7 @@
       <div class="col-md-4">
         <div class="product-item">
           <div class="product-thumb">
-            <img class="img-responsive" src="shop/products/product-9.jpg" alt="product-img" />
+            <%=image_tag("shop/products/product-9.jpg", class:"img-responsive", alt:"product-img") %>
             <div class="preview-meta">
               <ul>
                 <li>
