@@ -12,4 +12,13 @@
  *
  *= require_tree .
  *= require_self
+ *= require main_style
+ *= require bootstrap.min
+ *= require pe-icon-7-stroke
+ *= require font-awesome
+ *= require settings
+ *= require layers
+ *= require navigation
+ *= require style
+
  */
