@@ -6,6 +6,7 @@ class CreateProducts < ActiveRecord::Migration[6.0]
       t.string :season                                      #Winter, spring...
       t.string :sizes                                       #Sizes of a product, in format "12-23-11-12", where 12 is S size, 23 is M size...
       t.string :color
+      t.float :price
       t.references :Customer, index: true             #Foreign key to table Customer
       t.timestamps
     end
