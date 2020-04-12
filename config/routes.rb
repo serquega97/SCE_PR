@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   get 'welcome', to: 'pages#home'
   get 'products', to: 'products#get_products'
+  get 'products/:season', to: 'products#get_products_season', as: 'products_s'
+  get 'products/:type', to: 'products#get_products_type', as: 'products_t'
 end

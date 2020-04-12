@@ -31,6 +31,9 @@ ActiveRecord::Schema.define(version: 2020_04_11_094218) do
     t.string "season"
     t.string "sizes"
     t.string "color"
+    t.string "image"
+    t.float "price"
+    t.integer "quantity"
     t.integer "Customer_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

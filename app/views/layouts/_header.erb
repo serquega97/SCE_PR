@@ -6,11 +6,9 @@
 <html class="no-js" lang=""> <!--<![endif]-->
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta name="description" content="Aviato E-Commerce Template">
+  <meta name="description">
 
-  <meta name="author" content="Themefisher.com">
-
-  <title>Aviato | E-commerce template</title>
+  <meta name="author">
 
   <!-- Mobile Specific Meta-->
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -174,13 +172,17 @@
                 <!-- Basic -->
                 <div class="col-lg-6 col-md-6 mb-sm-3">
                   <ul>
-                    <li class="dropdown-header">Pages</li>
+                    <li class="dropdown-header">Product Type</li>
                     <li role="separator" class="divider"></li>
-                    <li><a href="shop.html">Shop</a></li>
-                    <li><a href="checkout.html">Checkout</a></li>
-                    <li><a href="cart.html">Cart</a></li>
-                    <li><a href="pricing.html">Pricing</a></li>
-                    <li><a href="confirmation.html">Confirmation</a></li>
+                    <li><a href="shop.html">Shirt</a></li>
+                    <li><a href="checkout.html">Trousers</a></li>
+                    <li><a href="cart.html">Skirt</a></li>
+                    <li><a href="pricing.html">Cap</a></li>
+                    <li><a href="confirmation.html">Jewellery</a></li>
+                    <li><a href="confirmation.html">Hat</a></li>
+                    <li><a href="confirmation.html">Jacket</a></li>
+                    <li><a href="confirmation.html">Shoes</a></li>
+                    <li><a href="confirmation.html">Jumper</a></li>
 
                   </ul>
                 </div>
@@ -190,7 +192,7 @@
                   <ul>
                     <li class="dropdown-header">Seasons</li>
                     <li role="separator" class="divider"></li>
-                    <li><a href="winter.html">Winter</a></li>
+                    <li><%=link_to "Winter", products_s_path(:season => "Winter") %></li>
                     <li><a href="spring.html">Spring</a></li>
                     <li><a href="summer.html">Summer</a></li>
                     <li><a href="autumn.html">Autumn</a></li>
