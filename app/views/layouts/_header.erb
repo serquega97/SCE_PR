@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="en"> <![endif]-->
 <!--[if gt IE 8]><!-->
-<html class="no-js" lang=""> <!--<![endif]-->
+<html class="no-js" lang="en"> <!--<![endif]-->
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="description">
@@ -36,6 +36,11 @@
 </head>
 
 <body id="body">
+<!-- Languages -->
+<div style="position: absolute; left: 10px; top: 5px;">
+  <a href="#eng" data-reload ><%=image_tag("flags/en.png", class:"rev-slidebg", alt:"", height: 12) %></a>
+  <a href="#es" data-reload ><%=image_tag("flags/es.jpg", class:"rev-slidebg", alt:"", height: 12) %></a>
+</div>
 
 <!-- Start Top Header Bar -->
 <section class="top-header">
@@ -65,12 +70,15 @@
         </div>
       </div>
       <div class="col-md-4 col-xs-12 col-sm-4">
-        <!-- Cart -->
+
+        <!-- Sign In -->
         <ul class="top-menu text-right list-inline">
           <li class="dropdown search dropdown-slide">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"><i class="tf-ion-android"></i> Sign in</a>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" id="login">Sign In</a>
+
+        <!-- Cart -->
           <li class="dropdown cart-nav dropdown-slide">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"><i class="tf-ion-android-cart"></i>Cart</a>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" id="cart"><i class="tf-ion-android-cart"></i>Cart</a>
             <div class="dropdown-menu cart-dropdown">
 
               <!-- Cart Item -->
@@ -118,19 +126,21 @@
 
           <!-- Search -->
           <li class="dropdown search dropdown-slide">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"><i class="tf-ion-ios-search-strong"></i> Search</a>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" id="sear"><i class="tf-ion-ios-search-strong"></i>Search</a>
             <ul class="dropdown-menu search-dropdown">
               <li><form action="post"><input type="search" class="form-control" placeholder="Search..."></form></li>
             </ul>
           </li><!-- / Search -->
 
           <!-- Languages -->
-          <li class="commonSelect">
-            <select class="form-control" name="language">
-              <option>EN</option>
-              <option>ES</option>
-            </select>
-          </li><!-- / Languages -->
+          <!-- <li class="commonSelect">
+            <label>
+             <select class="form-control" name="language">
+                <option href="#es" data-reload>ES</option>
+                <option href="#en" data-reload>EN</option>
+              </select>
+            </label>
+          </li> --> <!-- / Languages -->
 
         </ul><!-- / .nav .navbar-nav .navbar-right -->
       </div>
@@ -165,37 +175,48 @@
 
           <!-- Elements -->
           <li class="dropdown dropdown-slide">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="350" role="button" aria-haspopup="true" aria-expanded="false">Shop <span class="tf-ion-ios-arrow-down"></span></a>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="350" role="button" aria-haspopup="true" aria-expanded="false" id="shop">Shop <span class="tf-ion-ios-arrow-down"></span></a>
             <div class="dropdown-menu">
               <div class="row">
 
                 <!-- Basic -->
                 <div class="col-lg-6 col-md-6 mb-sm-3">
                   <ul>
-                    <li class="dropdown-header">Product Type</li>
+                    <li class="dropdown-header" id="clothes">Clothes</li>
                     <li role="separator" class="divider"></li>
-                    <li><a href="shop.html">Shirt</a></li>
-                    <li><a href="checkout.html">Trousers</a></li>
-                    <li><a href="cart.html">Skirt</a></li>
-                    <li><a href="pricing.html">Cap</a></li>
-                    <li><a href="confirmation.html">Jewellery</a></li>
-                    <li><a href="confirmation.html">Hat</a></li>
-                    <li><a href="confirmation.html">Jacket</a></li>
-                    <li><a href="confirmation.html">Shoes</a></li>
-                    <li><a href="confirmation.html">Jumper</a></li>
+                    <li><a href="shop.html" id="shirt">Shirt</a></li>
+                    <li><a href="checkout.html" id="trousers">Trousers</a></li>
+                    <li><a href="cart.html" id="skirt">Skirt</a>
+                    <li><a href="cart.html" id="dress">Dress</a>
+                    <li><a href="confirmation.html" id="jumper">Jumper</a></li>
+                    <li><a href="confirmation.html" id="jacket">Jacket</a></li>
+                    <li><a href="confirmation.html" id="shoes">Shoes</a></li>
 
                   </ul>
                 </div>
 
-                <!-- Layout -->
+                <!-- Seasons -->
                 <div class="col-lg-6 col-md-6 mb-sm-3">
                   <ul>
-                    <li class="dropdown-header">Seasons</li>
+                    <li class="dropdown-header" id="seasons">Seasons</li>
                     <li role="separator" class="divider"></li>
-                    <li><%=link_to "Winter", products_s_path(:season => "Winter") %></li>
-                    <li><a href="spring.html">Spring</a></li>
-                    <li><a href="summer.html">Summer</a></li>
-                    <li><a href="autumn.html">Autumn</a></li>
+                    <li><a href="spring.html" id="winter">Winter</a></li>
+                    <li><a href="spring.html" id="spring">Spring</a></li>
+                    <li><a href="summer.html" id="summer">Summer</a></li>
+                    <li><a href="autumn.html" id="autumn">Autumn</a></li>
+
+                  </ul>
+                </div>
+
+                <!-- Accesories -->
+                <div class="col-lg-6 col-md-6 mb-sm-3">
+                  <ul>
+                    <li class="dropdown-header" id="accesories">Accesories</li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="confirmation.html" id="jewellery">Jewellery</a></li>
+                    <li><a href="confirmation.html" id="hats" >Hats</a></li>
+                    <li><a href="confirmation.html" id="purses" >Purses</a></li>
+                    <li><a href="confirmation.html" id="bags" >Bags</a></li>
 
                   </ul>
                 </div>
@@ -204,80 +225,13 @@
             </div><!-- / .dropdown-menu -->
           </li><!-- / Elements -->
 
-
-          <!-- Pages -->
-          <li class="dropdown full-width dropdown-slide">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="350" role="button" aria-haspopup="true" aria-expanded="false">Pages <span class="tf-ion-ios-arrow-down"></span></a>
-            <div class="dropdown-menu">
-              <div class="row">
-
-                <!-- Introduction -->
-                <div class="col-sm-3 col-xs-12">
-                  <ul>
-                    <li class="dropdown-header">Introduction</li>
-                    <li role="separator" class="divider"></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="404.html">404 Page</a></li>
-                    <li><a href="coming-soon.html">Coming Soon</a></li>
-                    <li><a href="faq.html">FAQ</a></li>
-                  </ul>
-                </div>
-
-                <!-- Contact -->
-                <div class="col-sm-3 col-xs-12">
-                  <ul>
-                    <li class="dropdown-header">Dashboard</li>
-                    <li role="separator" class="divider"></li>
-                    <li><a href="dashboard.html">User Interface</a></li>
-                    <li><a href="order.html">Orders</a></li>
-                    <li><a href="address.html">Address</a></li>
-                    <li><a href="profile-details.html">Profile Details</a></li>
-                  </ul>
-                </div>
-
-                <!-- Utility -->
-                <div class="col-sm-3 col-xs-12">
-                  <ul>
-                    <li class="dropdown-header">Utility</li>
-                    <li role="separator" class="divider"></li>
-                    <li><a href="login.html">Login Page</a></li>
-                    <li><a href="signin.html">Signin Page</a></li>
-                    <li><a href="forget-password.html">Forget Password</a></li>
-                  </ul>
-                </div>
-
-                <!-- Mega Menu -->
-                <div class="col-sm-3 col-xs-12">
-                  <a href="shop.html">
-                    <img class="img-responsive" src="images/shop/header-img.jpg" alt="menu image" />
-                  </a>
-                </div>
-              </div><!-- / .row -->
-            </div><!-- / .dropdown-menu -->
-          </li><!-- / Pages -->
-
-
-
-          <!-- Blog -->
-          <li class="dropdown dropdown-slide">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="350" role="button" aria-haspopup="true" aria-expanded="false">Blog <span class="tf-ion-ios-arrow-down"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="blog-left-sidebar.html">Blog Left Sidebar</a></li>
-              <li><a href="blog-right-sidebar.html">Blog Right Sidebar</a></li>
-              <li><a href="blog-full-width.html">Blog Full Width</a></li>
-              <li><a href="blog-grid.html">Blog 2 Columns</a></li>
-              <li><a href="blog-single.html">Blog Single</a></li>
-            </ul>
-          </li><!-- / Blog -->
-
           <!-- Personal Shopper -->
           <li class="dropdown dropdown-slide">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="350" role="button" aria-haspopup="true" aria-expanded="false">Personal Shopper <span class="tf-ion-ios-arrow-down"></span></a>
             <ul class="dropdown-menu">
-              <li><a href="whatis.html">What's a personal shopper?</a></li>
-              <li><a href="ourPersonal.html">Our personal shoppers</a></li>
-              <li><a href="start.html">Start</a></li>
+              <li><a href="whatis.html" id="whatIs">What's a personal shopper?</a></li>
+              <li><a href="ourPersonal.html" id="ourPersonal">Our personal shoppers</a></li>
+              <li><a href="start.html" id="start">Start</a></li>
             </ul>
           </li><!-- / Blog -->
         </ul><!-- / .nav .navbar-nav -->
@@ -286,3 +240,73 @@
     </div><!-- / .container -->
   </nav>
 </section>
+
+  <!-- Script to change the website's language -->
+  <script>
+      function reload() {
+          location.reload(true);
+      }
+
+      //Language translations
+      var language = {
+          es: {
+              shop:"TIENDA <span class=\"tf-ion-ios-arrow-down\">",
+              login: "Inicia Sesión",
+              cart: "<i class=\"tf-ion-android-cart\"></i>Bolsa",
+              search: "<i class=\"tf-ion-ios-search-strong\"></i>Buscar",
+              clothes: "Ropa",
+              shirt: "Camisetas",
+              trousers: "Vaqueros",
+              skirt: "Faldas",
+              dress: "Vestidos",
+              jumper: "Jerseis",
+              jacket: "Chaquetas",
+              shoes: "Zapatos",
+              seasons: "Estaciones",
+              winter: "Invierno",
+              spring: "Primavera",
+              summer: "Verano",
+              autumn: "Otoño",
+              accesories: "Accesorios",
+              jewellery: "Joyería",
+              hats: "Gorros",
+              purses: "Carteras",
+              bags: "Bolsos",
+              whatIs: "¿Qué es un personal shopper?",
+              ourPersonal: "Nuestros personal shoppers",
+              start: "Comienza"
+          }
+      };
+
+      //Define language via window hash
+      if (window.location.hash  ){
+          if(window.location.hash === "#es"){
+              login.textContent = language.es.login;
+              shop.innerHTML = language.es.shop;
+              cart.innerHTML = language.es.cart;
+              sear.innerHTML = language.es.search;
+              clothes.textContent = language.es.clothes;
+              shirt.textContent = language.es.shirt;
+              trousers.textContent = language.es.trousers;
+              skirt.textContent = language.es.skirt;
+              dress.textContent = language.es.dress;
+              jumper.textContent = language.es.jumper;
+              jacket.textContent = language.es.jacket;
+              shoes.textContent = language.es.shoes;
+              seasons.textContent = language.es.seasons;
+              winter.textContent = language.es.winter;
+              spring.textContent = language.es.spring;
+              summer.textContent = language.es.summer;
+              autumn.textContent = language.es.autumn;
+              accesories.textContent = language.es.accesories;
+              jewellery.textContent = language.es.jewellery;
+              hats.textContent = language.es.hats;
+              purses.textContent = language.es.purses;
+              bags.textContent = language.es.bags;
+              whatIs.textContent = language.es.whatIs;
+              ourPersonal.textContent = language.es.ourPersonal;
+              start.textContent = language.es.start;
+          }
+      }
+
+  </script>
