@@ -4,7 +4,10 @@ class CreateProducts < ActiveRecord::Migration[6.0]
       t.string :name
       t.string :productType                                 #Shoes, shirt, trousers...
       t.string :season                                      #Winter, spring...
-      t.string :sizes                                       #Sizes of a product, in format "12-23-11-12", where 12 is S size, 23 is M size...
+      t.integer :sizeS
+      t.integer :sizeM
+      t.integer :sizeL
+      t.integer :sizeXL
       t.string :color
       t.string :image
       t.float :price
