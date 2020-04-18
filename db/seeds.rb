@@ -5,6 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Product.destroy_all
 # Jewellery
 p1 = Product.create(name:"Gold Ring", productType:"Jewellery", season:"All", sizeS: 0, sizeM: 0, sizeL: 0, sizeXL: 0, color:"Gold", image:"shop/jewellery/ring1.jpg", price: 2.99, quantity: 30)
 p2 = Product.create(name:"Gold Diamant Ring", productType:"Jewellery", season:"All", sizeS: 0, sizeM: 0, sizeL: 0, sizeXL: 0, color:"Gold", image:"shop/jewellery/ring2.jpg", price: 3.99, quantity: 30)

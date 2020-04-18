@@ -29,15 +29,18 @@ ActiveRecord::Schema.define(version: 2020_04_11_094218) do
     t.string "name"
     t.string "productType"
     t.string "season"
-    t.string "sizes"
+    t.integer "sizeS"
+    t.integer "sizeM"
+    t.integer "sizeL"
+    t.integer "sizeXL"
     t.string "color"
     t.string "image"
     t.float "price"
     t.integer "quantity"
-    t.integer "Customer_id"
+    t.integer "customer_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["Customer_id"], name: "index_products_on_Customer_id"
+    t.index ["customer_id"], name: "index_products_on_customer_id"
   end
 
 end

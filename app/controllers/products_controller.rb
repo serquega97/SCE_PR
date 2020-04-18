@@ -4,10 +4,10 @@ class ProductsController < ApplicationController
   end
 
   def get_products_season
-    @products = Product.all.select(params[:season])
+    @products = Product.where(season: params["season"])
   end
 
   def get_products_type
-    @products = Product.all.select(params[:type])
+    @products = Product.where(productType: params["type"])
   end
 end

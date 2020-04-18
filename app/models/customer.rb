@@ -1,3 +1,3 @@
 class Customer < ApplicationRecord
-  has_many :Product
+  has_many :products
 end
