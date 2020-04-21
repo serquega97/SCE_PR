@@ -5,12 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-Product.destroy_all
+
 # Jewellery
 p1 = Product.create(name:"Gold Ring", productType:"Jewellery", season:"All", sizeS: 0, sizeM: 0, sizeL: 0, sizeXL: 0, color:"Gold", image:"shop/jewellery/ring1.jpg", price: 2.99, quantity: 30)
-p2 = Product.create(name:"Gold Diamant Ring", productType:"Jewellery", season:"All", sizeS: 0, sizeM: 0, sizeL: 0, sizeXL: 0, color:"Gold", image:"shop/jewellery/ring2.jpg", price: 3.99, quantity: 30)
+p2 = Product.create(name:"Gold Diamond Ring", productType:"Jewellery", season:"All", sizeS: 0, sizeM: 0, sizeL: 0, sizeXL: 0, color:"Gold", image:"shop/jewellery/ring2.jpg", price: 3.99, quantity: 30)
 p3 = Product.create(name:"Fish Necklace", productType:"Jewellery", season:"All", sizeS: 0, sizeM: 0, sizeL: 0, sizeXL: 0, color:"Gold", image:"shop/jewellery/necklace1.jpg", price: 4.99, quantity: 30)
-p4 = Product.create(name:"Gold Necklace", productType:"Jewellery", season:"All", sizeS: 0, sizeM: 0, sizeL: 0, sizeXL: 0, color:"Gold", image:"shop/jewellery/necklace2jpg", price: 3.99, quantity: 30)
+p4 = Product.create(name:"Gold Necklace", productType:"Jewellery", season:"All", sizeS: 0, sizeM: 0, sizeL: 0, sizeXL: 0, color:"Gold", image:"shop/jewellery/necklace2.jpg", price: 3.99, quantity: 30)
 
 #Caps
 p5 = Product.create(name:"DoNotDisturb", productType: "Cap", season:"All", sizeS:4, sizeM:6, sizeL:10, sizeXL:5, color:"Black", image:"shop/cap/ddcap.jpg", price:4.99, quantity:25)
@@ -42,7 +42,7 @@ p24 = Product.create(name:"Polo", productType: "Shirt", season:"Autumn", sizeS:4
 
 #Trousers
 p25 = Product.create(name:"Tropical Print Pants", productType: "Trousers", season:"Spring", sizeS:4, sizeM:6, sizeL:10, sizeXL:5, color:"Green", image:"shop/trousers/tpp.jpg", price:14.99, quantity:25)
-p26 = Product.create(name:"Wide Pants", productType: "Trousers", season:"Autumn", sizeS:4, sizeM:6, sizeL:10, sizeXL:5, color:"Blue", image:"trousers/wide.jpg", price:8.99, quantity:25)
+p26 = Product.create(name:"Wide Pants", productType: "Trousers", season:"Autumn", sizeS:4, sizeM:6, sizeL:10, sizeXL:5, color:"Blue", image:"shop/trousers/wide.jpg", price:8.99, quantity:25)
 p27 = Product.create(name:"Paper Bag Waist Striped Belted Shorts", productType: "Summer", season:"Spring", sizeS:4, sizeM:6, sizeL:10, sizeXL:5, color:"Black", image:"shop/trousers/pbs.jpg", price:7.99, quantity:25)
 p28 = Product.create(name:"Paperbag Waist Self Tie Solid Shorts", productType: "Trousers", season:"Summer", sizeS:4, sizeM:6, sizeL:10, sizeXL:5, color:"Blue", image:"shop/trousers/pws.jpg", price:25.99, quantity:25)
 p29 = Product.create(name:"Bleach Wash Ripped Distressed Mom Jeans", productType: "Trousers", season:"Autumn", sizeS:4, sizeM:6, sizeL:10, sizeXL:5, color:"Grey", image:"shop/trousers/bdj.jpg", price:25.99, quantity:25)
@@ -87,3 +87,16 @@ p57 = Product.create(name:"Avocado Slipper", productType: "Shoes", season:"Sprin
 p58 = Product.create(name:"Basic Boots", productType: "Shoes", season:"Winter", sizeS:4, sizeM:6, sizeL:10, sizeXL:5, color:"Black", image:"shop/shoes/bbs.jpg", price:39.99, quantity:25)
 p59 = Product.create(name:"Loafer", productType: "Shoes", season:"Autumn", sizeS:4, sizeM:6, sizeL:10, sizeXL:5, color:"White", image:"shop/shoes/ls.jpg", price:29.99, quantity:25)
 p60 = Product.create(name:"Stramp Pumps", productType: "Shoes", season:"Summer", sizeS:4, sizeM:6, sizeL:10, sizeXL:5, color:"Black", image:"shop/shoes/sps.jpg", price:34.99, quantity:25)
+
+#Customers
+c1 = Customer.create(name: "Sergi", surnames:"Quevedo Garreta", email:"admin", password:"admin", date_birth:"2020-4-19", street:"C/Matalassanya, 3", phone:"678908654", sex:"H")
+
+#Orders
+o1 = Order.create(buy_date:"2020-4-19", price:7.99, customer_id:c1.id)
+o2 = Order.create(buy_date:"2020-3-14", price:3.99, customer_id:c1.id)
+o3 = Order.create(buy_date:"2020-2-27", price:9.99, customer_id:c1.id)
+
+
+o1.products << [p4, p3, p55]
+o2.products << [p4, p3, p55]
+o3.products << [p4, p3, p55]

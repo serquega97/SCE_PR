@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_11_094218) do
+ActiveRecord::Schema.define(version: 2020_04_21_180926) do
 
   create_table "customers", force: :cascade do |t|
     t.string "name"
@@ -25,6 +25,24 @@ ActiveRecord::Schema.define(version: 2020_04_11_094218) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "orders", force: :cascade do |t|
+    t.date "buy_date"
+    t.float "price"
+    t.integer "customer_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["customer_id"], name: "index_orders_on_customer_id"
+  end
+
+  create_table "parts", force: :cascade do |t|
+    t.integer "order_id"
+    t.integer "product_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["order_id"], name: "index_parts_on_order_id"
+    t.index ["product_id"], name: "index_parts_on_product_id"
+  end
+
   create_table "products", force: :cascade do |t|
     t.string "name"
     t.string "productType"
@@ -37,10 +55,8 @@ ActiveRecord::Schema.define(version: 2020_04_11_094218) do
     t.string "image"
     t.float "price"
     t.integer "quantity"
-    t.integer "customer_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["customer_id"], name: "index_products_on_customer_id"
   end
 
 end

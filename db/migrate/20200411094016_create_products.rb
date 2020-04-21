@@ -12,7 +12,6 @@ class CreateProducts < ActiveRecord::Migration[6.0]
       t.string :image
       t.float :price
       t.integer :quantity
-      t.references :customer, index: true             #Foreign key to table Customer
       t.timestamps
     end
   end

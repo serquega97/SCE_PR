@@ -1,3 +1,4 @@
 class Product < ApplicationRecord
-  belongs_to :customer
+  has_many :parts
+  has_many :orders, through: :parts
 end
