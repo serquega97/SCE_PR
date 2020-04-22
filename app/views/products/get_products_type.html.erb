@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang=""> <!--<![endif]-->
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="description" content="Products from a season">
+
+  <meta name="author">
+
+  <title>Products season</title>
+
+  <!-- Mobile Specific Meta-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/x-icon" href="app/assets/images/favicon.png" />
+
+  <!-- Themefisher Icon font -->
+  <link rel="stylesheet" href="app/assets/stylesheets/style.css">
+  <!-- bootstrap.min css -->
+  <link rel="stylesheet" href="app/assets/stylesheets/bootstrap.min.css">
+
+  <!-- Revolution Slider -->
+  <link rel="stylesheet" type="text/css" href="app/assets/stylesheets/pe-icon-7-stroke.css">
+  <link rel="stylesheet" type="text/css" href="app/assets/stylesheets/font-awesome.css">
+
+  <!-- REVOLUTION STYLE SHEETS -->
+  <link rel="stylesheet" type="text/css" href="app/assets/stylesheets/settings.css">
+  <link rel="stylesheet" type="text/css" href="app/assets/stylesheets/layers.css">
+  <link rel="stylesheet" type="text/css" href="app/assets/stylesheets/navigation.css">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="app/assets/stylesheets/main_style.css">
+
+</head>
+
+<body id="body">
+<% @products.each do |p| %>
+  <div class="card col-xs-4">
+    <p><%= p.name %></p>
+  </div>
+<% end %>
+</body>
+</html>

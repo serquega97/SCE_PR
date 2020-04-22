@@ -184,14 +184,13 @@
                   <ul>
                     <li class="dropdown-header" id="clothes">Clothes</li>
                     <li role="separator" class="divider"></li>
-                    <li><a href="shop.html" id="shirt">Shirt</a></li>
-                    <li><a href="checkout.html" id="trousers">Trousers</a></li>
-                    <li><a href="cart.html" id="skirt">Skirt</a>
-                    <li><a href="cart.html" id="dress">Dress</a>
-                    <li><a href="confirmation.html" id="jumper">Jumper</a></li>
-                    <li><a href="confirmation.html" id="jacket">Jacket</a></li>
-                    <li><a href="confirmation.html" id="shoes">Shoes</a></li>
-
+                    <li><%= link_to "Shirts", products_t_path("Shirt")%></li>
+                    <li><%= link_to "Trousers", products_t_path("Trousers")%></li>
+                    <li><%= link_to "Skirts", products_t_path("Skirt")%></li>
+                    <li><%= link_to "Dresses", products_t_path("Dress")%></li>
+                    <li><%= link_to "Jumpers", products_t_path("Jumper")%></li>
+                    <li><%= link_to "Jackets", products_t_path("Jacket")%></li>
+                    <li><%= link_to "Shoes", products_t_path("Shoes")%></li>
                   </ul>
                 </div>
 
@@ -201,10 +200,10 @@
                     <li class="dropdown-header" id="seasons">Seasons</li>
                     <li role="separator" class="divider"></li>
                     <li><%= link_to "Winter", products_s_path("Winter")%></li>
-                    <li><a href="spring.html" id="spring">Spring</a></li>
-                    <li><a href="summer.html" id="summer">Summer</a></li>
-                    <li><a href="autumn.html" id="autumn">Autumn</a></li>
-
+                    <li><%= link_to "Spring", products_s_path("Spring")%></li>
+                    <li><%= link_to "Summer", products_s_path("Summer")%></li>
+                    <li><%= link_to "Autumn", products_s_path("Autumn")%></li>
+                    <li><%= link_to "All", products_s_path("All")%></li>
                   </ul>
                 </div>
 
@@ -213,10 +212,10 @@
                   <ul>
                     <li class="dropdown-header" id="accesories">Accesories</li>
                     <li role="separator" class="divider"></li>
-                    <li><a href="confirmation.html" id="jewellery">Jewellery</a></li>
-                    <li><a href="confirmation.html" id="hats" >Hats</a></li>
-                    <li><a href="confirmation.html" id="purses" >Purses</a></li>
-                    <li><a href="confirmation.html" id="bags" >Bags</a></li>
+                    <li><%= link_to "Jewellery", products_t_path("Jewellery")%></li>
+                    <li><%= link_to "Caps", products_t_path("Cap")%></li>
+                    <li><%= link_to "Purses", products_t_path("Purse")%></li>
+                    <li><%= link_to "Bags", products_t_path("Bag")%></li>
 
                   </ul>
                 </div>
