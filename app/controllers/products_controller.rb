@@ -1,13 +1,14 @@
 class ProductsController < ApplicationController
   def get_products
-    @products = Product.all
-  end
 
-  def get_products_season
-   @products = Product.where(season: params["season"])
-  end
+    if params[:prodType].present?
+      @products = Product.where(productType: params["prodType"])
 
-  def get_products_type
-    @products = Product.where(productType: params["productType"])
+      elsif params[:season].present?
+      @products = Product.where(season: params["season"])
+
+    else
+      @products = Product.all
+    end
   end
 end

@@ -43,7 +43,7 @@ p24 = Product.create(name:"Polo", productType: "Shirt", season:"Autumn", sizeS:4
 #Trousers
 p25 = Product.create(name:"Tropical Print Pants", productType: "Trousers", season:"Spring", sizeS:4, sizeM:6, sizeL:10, sizeXL:5, color:"Green", image:"shop/trousers/tpp.jpg", price:14.99, quantity:25)
 p26 = Product.create(name:"Wide Pants", productType: "Trousers", season:"Autumn", sizeS:4, sizeM:6, sizeL:10, sizeXL:5, color:"Blue", image:"shop/trousers/wide.jpg", price:8.99, quantity:25)
-p27 = Product.create(name:"Paper Bag Waist Striped Belted Shorts", productType: "Summer", season:"Spring", sizeS:4, sizeM:6, sizeL:10, sizeXL:5, color:"Black", image:"shop/trousers/pbs.jpg", price:7.99, quantity:25)
+p27 = Product.create(name:"Paper Bag Waist Striped Belted Shorts", productType: "Trousers", season:"Spring", sizeS:4, sizeM:6, sizeL:10, sizeXL:5, color:"Black", image:"shop/trousers/pbs.jpg", price:7.99, quantity:25)
 p28 = Product.create(name:"Paperbag Waist Self Tie Solid Shorts", productType: "Trousers", season:"Summer", sizeS:4, sizeM:6, sizeL:10, sizeXL:5, color:"Blue", image:"shop/trousers/pws.jpg", price:25.99, quantity:25)
 p29 = Product.create(name:"Bleach Wash Ripped Distressed Mom Jeans", productType: "Trousers", season:"Autumn", sizeS:4, sizeM:6, sizeL:10, sizeXL:5, color:"Grey", image:"shop/trousers/bdj.jpg", price:25.99, quantity:25)
 p30 = Product.create(name:"Roll Cuff Jeans", productType: "Trousers", season:"Autumn", sizeS:4, sizeM:6, sizeL:10, sizeXL:5, color:"Blue", image:"shop/trousers/rcj.jpg", price:10.99, quantity:25)

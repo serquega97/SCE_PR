@@ -184,13 +184,14 @@
                   <ul>
                     <li class="dropdown-header" id="clothes">Clothes</li>
                     <li role="separator" class="divider"></li>
-                    <li><%= link_to "Shirts", products_t_path("Shirt")%></li>
-                    <li><%= link_to "Trousers", products_t_path("Trousers")%></li>
-                    <li><%= link_to "Skirts", products_t_path("Skirt")%></li>
-                    <li><%= link_to "Dresses", products_t_path("Dress")%></li>
-                    <li><%= link_to "Jumpers", products_t_path("Jumper")%></li>
-                    <li><%= link_to "Jackets", products_t_path("Jacket")%></li>
-                    <li><%= link_to "Shoes", products_t_path("Shoes")%></li>
+                    <li><%= link_to "All Products", products_path("All"), :id => 'allProd'%></li>
+                    <li><%= link_to "Shirts", products_path(prodType: "Shirt"), :id => 'shirt'%></li>
+                    <li><%= link_to "Trousers", products_path(prodType: "Trousers"), :id => 'trousers'%></li>
+                    <li><%= link_to "Skirts", products_path(prodType: "Skirt"), :id => 'skirt'%></li>
+                    <li><%= link_to "Dresses", products_path(prodType: "Dress"), :id => 'dress'%></li>
+                    <li><%= link_to "Jumpers", products_path(prodType: "Jumper"), :id => 'jumper'%></li>
+                    <li><%= link_to "Jackets", products_path(prodType: "Jacket"), :id => 'jacket'%></li>
+                    <li><%= link_to "Shoes", products_path(prodType: "Shoes"), :id => 'shoes'%></li>
                   </ul>
                 </div>
 
@@ -199,11 +200,10 @@
                   <ul>
                     <li class="dropdown-header" id="seasons">Seasons</li>
                     <li role="separator" class="divider"></li>
-                    <li><%= link_to "Winter", products_s_path("Winter")%></li>
-                    <li><%= link_to "Spring", products_s_path("Spring")%></li>
-                    <li><%= link_to "Summer", products_s_path("Summer")%></li>
-                    <li><%= link_to "Autumn", products_s_path("Autumn")%></li>
-                    <li><%= link_to "All", products_s_path("All")%></li>
+                    <li><%= link_to "Winter", products_path(season: "Winter"), :id => 'winter'%></li>
+                    <li><%= link_to "Spring", products_path(season: "Spring"), :id => 'spring'%></li>
+                    <li><%= link_to "Summer", products_path(season: "Summer"), :id => 'summer'%></li>
+                    <li><%= link_to "Autumn", products_path(season: "Autumn"), :id => 'autumn'%></li>
                   </ul>
                 </div>
 
@@ -212,10 +212,10 @@
                   <ul>
                     <li class="dropdown-header" id="accesories">Accesories</li>
                     <li role="separator" class="divider"></li>
-                    <li><%= link_to "Jewellery", products_t_path("Jewellery")%></li>
-                    <li><%= link_to "Caps", products_t_path("Cap")%></li>
-                    <li><%= link_to "Purses", products_t_path("Purse")%></li>
-                    <li><%= link_to "Bags", products_t_path("Bag")%></li>
+                    <li><%= link_to "Jewellery", products_path(prodType: "Jewellery"), :id => 'jewellery'%></li>
+                    <li><%= link_to "Caps", products_path(prodType: "Cap"), :id => 'hats'%></li>
+                    <li><%= link_to "Purses", products_path(prodType: "Purse"), :id => 'purses'%></li>
+                    <li><%= link_to "Bags", products_path(prodType: "Bag"), :id => 'bags'%></li>
 
                   </ul>
                 </div>
@@ -273,7 +273,8 @@
               bags: "Bolsos",
               whatIs: "¿Qué es un personal shopper?",
               ourPersonal: "Nuestros personal shoppers",
-              start: "Comienza"
+              start: "Comienza",
+              allProd: "Todos los productos"
           }
       };
 
@@ -305,6 +306,7 @@
               whatIs.textContent = language.es.whatIs;
               ourPersonal.textContent = language.es.ourPersonal;
               start.textContent = language.es.start;
+              allProd.textContent = language.es.allProd;
           }
       }
 
