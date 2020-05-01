@@ -129,8 +129,8 @@
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" id="sear"><i class="tf-ion-ios-search-strong"></i>Search</a>
             <ul class="dropdown-menu search-dropdown">
               <li><%= form_tag(products_path, :method => 'get', id: "search_form") do %></li>
-                  <%= text_field_tag :search, params[:search], placeholder: "Search...", class: "form-control" %>
-                  <% end %>
+                  <%= text_field_tag :search, params[:search], placeholder: "Search...", class: "form-control", id: "search_id" %>
+                <% end %>
             </ul>
           </li><!-- / Search -->
 
@@ -171,7 +171,7 @@
 
           <!-- Home -->
           <li class="dropdown ">
-            <a href="index.html">Home</a>
+            <%= link_to "Home", welcome_path%>
           </li><!-- / Home -->
 
 
@@ -311,5 +311,27 @@
               allProd.textContent = language.es.allProd;
           }
       }
+      //Search bar autocomplete
+      $( function() {
+          function log( message ) {
+              $( "<div>" ).text( message ).prependTo( "#search_form" );
+              $( "#search_form" ).scrollTop( 0 );
+          }
+          $( "#search_id" ).autocomplete({
+              source: function( request, response ) {
+                  $.ajax( {
+                      url: "/products/get_products",
+                      dataType: "jsonp",
+                      data: {
+                          term: request.term
+                      },
+                      success: function( data ) {
+                          response( data );
+                      }
+                  } );
+              },
+              minLength: 1,
+          } );
+      } );
 
   </script>
