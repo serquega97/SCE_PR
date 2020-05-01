@@ -7,6 +7,9 @@ class ProductsController < ApplicationController
       elsif params[:season].present?
       @products = Product.where(season: params["season"])
 
+      elsif params[:search].present?
+        @products = Product.search(params[:search])
+
     else
       @products = Product.all
     end
