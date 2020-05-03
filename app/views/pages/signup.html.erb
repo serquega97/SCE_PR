@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="description" content="Aviato E-Commerce Template">
+
+  <meta name="author" content="Themefisher.com">
+
+  <title>Create your account</title>
+
+  <!-- Mobile Specific Meta-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
+
+  <!-- Themefisher Icon font -->
+  <link rel="stylesheet" href="plugins/themefisher-font/style.css">
+  <!-- bootstrap.min css -->
+  <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css">
+
+  <!-- Revolution Slider -->
+  <link rel="stylesheet" type="text/css" href="plugins/revolution-slider/revolution/fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css">
+  <link rel="stylesheet" type="text/css" href="plugins/revolution-slider/revolution/fonts/font-awesome/css/font-awesome.css">
+
+  <!-- REVOLUTION STYLE SHEETS -->
+  <link rel="stylesheet" type="text/css" href="plugins/revolution-slider/revolution/css/settings.css">
+  <link rel="stylesheet" type="text/css" href="plugins/revolution-slider/revolution/css/layers.css">
+  <link rel="stylesheet" type="text/css" href="plugins/revolution-slider/revolution/css/navigation.css">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body id="body">
+
+<section class="signin-page account">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <div class="block text-center">
+          <a class="logo" href="index.html">
+            <img src="images/logo.png" alt="">
+          </a>
+          <h2 class="text-center">Create Your Account</h2>
+          <%= form_for :customer, class: 'text-left clearfix', :url => new_user_path, :method => :put do |f|  %>
+            <div class="form-group">
+              <%= f.text_field :firstName, :class => 'form-control', :placeholder => 'First name', :id => 'firstName'%>
+            </div>
+            <div class="form-group">
+              <%= f.text_field :lastName, :class => 'form-control', :placeholder => 'Last Name', :id => 'lastName'%>
+            </div>
+            <div class="form-group">
+              <%= f.text_field :email, :class => 'form-control', :placeholder => 'Email', :id => 'email'%>
+            </div>
+            <div class="form-group">
+              <%= f.password_field :password, :class => 'form-control', :placeholder => 'Password', :id => 'password' %>
+            </div>
+            <div class="text-center">
+              <%= f.submit "Login", class: "btn btn-main text-center"%>
+            </div>
+          <% end %>
+          <p class="mt-20" id="haveAccount">Already have an account? <%= link_to "Login", signin_path, :id => 'login' %></p>
+          <p><%= link_to "Forgot your password?", :id => 'forgotPassword' %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</body>
+</html>

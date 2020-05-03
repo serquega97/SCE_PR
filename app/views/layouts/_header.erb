@@ -36,20 +36,15 @@
 </head>
 
 <body id="body">
-<!-- Languages -->
-<div style="position: absolute; left: 10px; top: 5px;">
-  <a href="#eng" data-reload ><%=image_tag("flags/en.png", class:"rev-slidebg", alt:"", height: 12) %></a>
-  <a href="#es" data-reload ><%=image_tag("flags/es.jpg", class:"rev-slidebg", alt:"", height: 12) %></a>
-</div>
-
 <!-- Start Top Header Bar -->
 <section class="top-header">
   <div class="container">
     <div class="row">
       <div class="col-md-4 col-xs-12 col-sm-4">
-        <div class="contact-number">
-          <i class="tf-ion-ios-telephone"></i>
-          <span>+34 657 674 013</span>
+        <!-- Languages -->
+        <div style="position: absolute; left: 10px; top: 5px;">
+          <a href="#eng" data-reload ><%=image_tag("flags/en.png", class:"rev-slidebg", alt:"", height: 12) %></a>
+          <a href="#es" data-reload ><%=image_tag("flags/es.jpg", class:"rev-slidebg", alt:"", height: 12) %></a>
         </div>
       </div>
       <div class="col-md-4 col-xs-12 col-sm-4">
@@ -74,7 +69,7 @@
         <!-- Sign In -->
         <ul class="top-menu text-right list-inline">
           <li class="dropdown search dropdown-slide">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" id="login">Sign In</a>
+            <%= link_to "Sign In", signin_path, :class => 'dropdown-toggle', :id => 'login'%>
 
         <!-- Cart -->
           <li class="dropdown cart-nav dropdown-slide">
@@ -129,8 +124,13 @@
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" id="sear"><i class="tf-ion-ios-search-strong"></i>Search</a>
             <ul class="dropdown-menu search-dropdown">
               <li><%= form_tag(products_path, :method => 'get', id: "search_form") do %></li>
+<<<<<<< HEAD
                   <%= text_field_tag :search, params[:search], placeholder: "Search...", class: "form-control", id: "search_id" %>
                 <% end %>
+=======
+                  <%= text_field_tag :search, params[:search], placeholder: "Search...", class: "form-control", id: "search_id"%>
+                  <% end %>
+>>>>>>> tmp
             </ul>
           </li><!-- / Search -->
 
@@ -171,7 +171,12 @@
 
           <!-- Home -->
           <li class="dropdown ">
+<<<<<<< HEAD
             <%= link_to "Home", welcome_path%>
+=======
+            <!--<%= link_to "Home", "/welcome", :id => 'home'%> -->
+            <%= link_to "Home", :controller => :pages, :action => :home %>
+>>>>>>> tmp
           </li><!-- / Home -->
 
 
@@ -276,7 +281,8 @@
               whatIs: "¿Qué es un personal shopper?",
               ourPersonal: "Nuestros personal shoppers",
               start: "Comienza",
-              allProd: "Todos los productos"
+              allProd: "Todos los productos",
+              home: "Inicio"
           }
       };
 
@@ -309,6 +315,7 @@
               ourPersonal.textContent = language.es.ourPersonal;
               start.textContent = language.es.start;
               allProd.textContent = language.es.allProd;
+              home.textContent = language.es.home;
           }
       }
       //Search bar autocomplete
