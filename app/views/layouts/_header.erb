@@ -69,7 +69,7 @@
         <!-- Sign In -->
         <ul class="top-menu text-right list-inline">
           <li class="dropdown search dropdown-slide">
-            <%= link_to "Sign In", signin_path, :class => 'dropdown-toggle', :id => 'login'%>
+            <%= render '/layouts/user_widget' %>
 
         <!-- Cart -->
           <li class="dropdown cart-nav dropdown-slide">
@@ -167,7 +167,6 @@
           <!-- Home -->
           <li class="dropdown ">
             <!--<%= link_to "Home", "/welcome", :id => 'home'%> -->
-            <%= link_to "Home", :controller => :pages, :action => :home %>
           </li><!-- / Home -->
 
 
