@@ -1,4 +1,3 @@
-//= require jquery
 //= require jquery.min
 //= require bootstrap.min
 //= require jquery.bootstrap-touchspin.min
@@ -19,4 +18,3 @@
 //= require warning
 //= require gmap
 //= require script
-//= require jquery-ui

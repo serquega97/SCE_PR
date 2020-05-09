@@ -41,7 +41,6 @@
   <div class="container">
     <div class="row">
       <div class="col-md-4 col-xs-12 col-sm-4">
-        <!-- Languages -->
         <div style="position: absolute; left: 10px; top: 5px;">
           <a href="#eng" data-reload ><%=image_tag("flags/en.png", class:"rev-slidebg", alt:"", height: 12) %></a>
           <a href="#es" data-reload ><%=image_tag("flags/es.jpg", class:"rev-slidebg", alt:"", height: 12) %></a>
@@ -123,9 +122,7 @@
           <li class="dropdown search dropdown-slide">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" id="sear"><i class="tf-ion-ios-search-strong"></i>Search</a>
             <ul class="dropdown-menu search-dropdown">
-              <li><%= form_tag(products_path, :method => 'get', id: "search_form") do %></li>
-                  <%= text_field_tag :search, params[:search], placeholder: "Search...", class: "form-control", id: "search_id" %>
-                <% end %>
+              <li><form action="post"><input type="search" class="form-control" placeholder="Search..."></form></li>
             </ul>
           </li><!-- / Search -->
 
@@ -270,9 +267,7 @@
               bags: "Bolsos",
               whatIs: "¿Qué es un personal shopper?",
               ourPersonal: "Nuestros personal shoppers",
-              start: "Comienza",
-              allProd: "Todos los productos",
-              home: "Inicio"
+              start: "Comienza"
           }
       };
 
@@ -304,31 +299,7 @@
               whatIs.textContent = language.es.whatIs;
               ourPersonal.textContent = language.es.ourPersonal;
               start.textContent = language.es.start;
-              allProd.textContent = language.es.allProd;
-              home.textContent = language.es.home;
           }
       }
-      //Search bar autocomplete
-      $( function() {
-          function log( message ) {
-              $( "<div>" ).text( message ).prependTo( "#search_form" );
-              $( "#search_form" ).scrollTop( 0 );
-          }
-          $( "#search_id" ).autocomplete({
-              source: function( request, response ) {
-                  $.ajax( {
-                      url: "/products/get_products",
-                      dataType: "jsonp",
-                      data: {
-                          term: request.term
-                      },
-                      success: function( data ) {
-                          response( data );
-                      }
-                  } );
-              },
-              minLength: 1,
-          } );
-      } );
 
   </script>
